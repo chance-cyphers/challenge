@@ -1,7 +1,7 @@
 import 'dart:io';
 
+import 'package:challenge_app/camera_page.dart';
 import 'package:challenge_app/device_storage.dart';
-import 'package:challenge_app/gcloud.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -36,16 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return file.writeAsString('$counter');
   }
 
-  void _onPress() async {
-    Navigator.of(context)
-        .push(new MaterialPageRoute(builder: (BuildContext buildContext) {
-      return new Scaffold(
-        appBar: new AppBar(
-          title: const Text("the new page"),
-        ),
-        body: const Text("placeholder body"),
-      );
-    }));
+  void _onPress() {
+    Navigator.of(context).push(new MaterialPageRoute(
+        builder: (BuildContext buildContext) => CameraPage()));
   }
 
   @override
