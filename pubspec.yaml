@@ -18,6 +18,7 @@ dependencies:
   googleapis: any
   googleapis_auth: any
   cupertino_icons: ^0.1.2
+  path_provider: ^0.4.1
 
 dev_dependencies:
   flutter_test:
