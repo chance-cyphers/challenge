@@ -37,6 +37,7 @@ void uploadFile(File f, String name) {
   clientViaServiceAccount(credentials, _SCOPES).then((httpClient) {
     var storage = new StorageApi(httpClient);
     var media = new Media(f.openRead(), f.lengthSync());
+    print("uploading file: ${f.toString()}");
     return storage.objects.insert(null, "challenge-video-bucket", name: name, uploadMedia: media);
   });
 }

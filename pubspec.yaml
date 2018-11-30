@@ -19,6 +19,7 @@ dependencies:
   googleapis_auth: any
   cupertino_icons: ^0.1.2
   path_provider: ^0.4.1
+  camera: ^0.2.6
 
 dev_dependencies:
   flutter_test:

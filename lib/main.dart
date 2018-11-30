@@ -37,8 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onPress() async {
-    var file = await writeCounter(123);
-    uploadFile(file, "hello.txt");
+//    var file = await writeCounter(321);
+//    uploadFile(file, "hello.txt");
   }
 
   @override

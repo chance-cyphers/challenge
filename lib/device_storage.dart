@@ -10,7 +10,7 @@ class DeviceStorage {
 
   Future<File> getLocalFile(String filename) async {
     final directory = await getApplicationDocumentsDirectory();
-    return File('$directory.path/$filename');
+    return File('${directory.path}/$filename');
   }
 
 }
