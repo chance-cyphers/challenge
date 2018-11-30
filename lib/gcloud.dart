@@ -31,12 +31,12 @@ void getStuff() {
   });
 }
 
-void uploadFile(File f) {
+void uploadFile(File f, String name) {
   var credentials = new ServiceAccountCredentials.fromJson(credentialsJson);
 
   clientViaServiceAccount(credentials, _SCOPES).then((httpClient) {
     var storage = new StorageApi(httpClient);
     var media = new Media(f.openRead(), f.lengthSync());
-    return storage.objects.insert(null, "challenge-video-bucket", name: "hello.txt", uploadMedia: media);
+    return storage.objects.insert(null, "challenge-video-bucket", name: name, uploadMedia: media);
   });
 }
