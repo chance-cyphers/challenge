@@ -37,8 +37,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onPress() async {
-//    var file = await writeCounter(321);
-//    uploadFile(file, "hello.txt");
+    Navigator.of(context)
+        .push(new MaterialPageRoute(builder: (BuildContext buildContext) {
+      return new Scaffold(
+        appBar: new AppBar(
+          title: const Text("the new page"),
+        ),
+        body: const Text("placeholder body"),
+      );
+    }));
   }
 
   @override
